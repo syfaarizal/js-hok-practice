@@ -32,7 +32,7 @@ let students = [
 
 let studentWithStatus = students.map (s => ({
     ...s,
-    status: s.grade >= 70 ? "Lulus" : " Remedial",
+    status: s.grade >= 75 ? "Lulus" : "Remedial",
 }));
 console.log(studentWithStatus);
 
