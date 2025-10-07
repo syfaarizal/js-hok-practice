@@ -50,9 +50,38 @@ let formatUsers = apiUsers.map (a => ({
 console.log(formatUsers); 
 
 // filter
-let angka = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let genap = angka.filter( item => item % 2 === 0);
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let genap = number.filter( item => item % 2 === 0);
 console.log(genap);
 
-let ganjil = angka.filter( item => item % 2 !== 0);
+let ganjil = number.filter( item => item % 2 !== 0);
 console.log(ganjil);
+let lebihDariLima = number.filter( item => item > 5);
+console.log(lebihDariLima);
+
+// Challenge filter 1
+let angka = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+let angkaGenap = angka.filter (a => a % 2 === 0);
+console.log(angkaGenap);
+
+// Challenge filter 2
+let studentss = [
+    {name : "Syfa", grade: 95},
+    {name : "Budi", grade: 60},
+    {name : "Ani", grade: 75},
+    {name : "Dodo", grade: 50}
+];
+
+let lulus = studentss.filter (s => s.grade >= 75);
+console.log(lulus);
+
+// Challenge filter 3
+let products = [
+    {name: "Laptop", price: 1000},
+    {name: "Keyboard", price: 500},
+    {name: "Mouse", price: 200}
+];
+
+let murah = products.filter (p => p.price < 1000);
+console.log(murah);
