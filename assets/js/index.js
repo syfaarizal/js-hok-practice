@@ -85,3 +85,44 @@ let products = [
 
 let murah = products.filter (p => p.price < 1000);
 console.log(murah);
+
+// Filter + Map Challenge
+const users = [
+    {name: "Sisi", active: true, email: "sisi@gmail.com"},
+    {name: "Budi", active: false, email: "budi@gmail.com"},
+    {name: "Ani", active: true, email: "ani@gmail.com"}
+];
+
+const activeUserEmails = users
+    .filter (u => u.active)
+    .map (u => u.name + " - " + u.email);
+console.log(activeUserEmails);
+
+// Challenge 2 - Diskon produk mahal
+const productsName = [
+    {name: "Laptop", price: 1500},
+    {name: "Keyboard", price: 500},
+    {name: "Monitor", price: 1200},
+    {name: "Mouse", price: 200}
+];
+
+const discountedExpensiveProducts = productsName
+    .filter (p => p.price >= 1000)
+    .map (p => ({
+        ...p,
+        price: p.price * 0.9
+    }));
+console.log(discountedExpensiveProducts);
+
+// Challenge 3 - Filter murid lulus + ubah format tampilan
+const studentsName = [
+    {name: "Dodo", grade: 90},
+    {name: "Budi", grade: 60},
+    {name: "Ani", grade: 75},
+    {name: "Salsa", grade: 50}
+];
+
+const formattedPassingStudents = studentsName
+    .filter (s => s.grade >= 75)
+    .map (s => `${s.name} - Lulus (Nilai: ${s.grade})`);
+console.log(formattedPassingStudents);
