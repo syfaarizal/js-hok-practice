@@ -95,7 +95,7 @@ const users = [
 
 const activeUserEmails = users
     .filter (u => u.active)
-    .map (u => u.name + " - " + u.email);
+    .map (u => `${u.name} - ${u.email}`);
 console.log(activeUserEmails);
 
 // Challenge 2 - Diskon produk mahal
