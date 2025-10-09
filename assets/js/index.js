@@ -126,3 +126,8 @@ const formattedPassingStudents = studentsName
     .filter (s => s.grade >= 75)
     .map (s => `${s.name} - Lulus (Nilai: ${s.grade})`);
 console.log(formattedPassingStudents);
+
+// Reduce
+let nilai = [10, 20, 30, 40, 50];
+let totalNilai = nilai.reduce( (accumulator, currentValue) => accumulator + currentValue, 0);
+console.log(totalNilai);
