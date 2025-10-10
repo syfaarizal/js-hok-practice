@@ -129,5 +129,19 @@ console.log(formattedPassingStudents);
 
 // Reduce
 let nilai = [10, 20, 30, 40, 50];
-let totalNilai = nilai.reduce( (accumulator, currentValue) => accumulator + currentValue, 0);
+let totalNilai = nilai.reduce( (accumulator, currentValue) => accumulator + currentValue);
 console.log(totalNilai);
+
+const nameProducts = [
+  {name: "Laptop", price: 1500},
+  {name: "Keyboard", price: 500},
+  {name: "LMouse", price: 200}
+];
+
+const totalPrice = nameProducts.reduce((acc, u) => acc + u.price, 0);
+console.log(totalPrice);
+
+const angkaNih = [10, 20, 30];
+
+const totalAngka = angkaNih.reduce((ac, a) => ac + a);
+console.log(totalAngka);
