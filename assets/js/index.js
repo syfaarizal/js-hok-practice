@@ -145,3 +145,16 @@ const angkaNih = [10, 20, 30];
 
 const totalAngka = angkaNih.reduce((ac, a) => ac + a);
 console.log(totalAngka);
+
+const userss = ["Sylus", "Zayne", "Xavier"];
+
+const sentence = userss.reduce((acc, u) => acc + u + ", ", " ");
+console.log(sentence);
+
+const numbers = [1, 2, 3];
+
+const double = numbers.reduce((acc, n) => {
+  acc.push (n * 2);
+  return acc;
+}, []);
+console.log(double);
