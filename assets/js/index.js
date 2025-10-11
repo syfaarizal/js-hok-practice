@@ -158,3 +158,12 @@ const double = numbers.reduce((acc, n) => {
   return acc;
 }, []);
 console.log(double);
+
+const productsPrice = [
+  {name: "Laptop", price: 1500},
+  {name: "Keyboard", price: 500},
+  {name: "Mouse", price: 200}
+];
+
+const totalPrices = productsPrice.reduce((acc, p) => acc + p.price, 0);
+console.log(totalPrices);
