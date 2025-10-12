@@ -167,3 +167,13 @@ const productsPrice = [
 
 const totalPrices = productsPrice.reduce((acc, p) => acc + p.price, 0);
 console.log(totalPrices);
+
+const studentsGrade = [
+  {name: "Dodo", grade: 90},
+  {name: "Budi", grade: 60},
+  {name: "Ani", grade: 75},
+  {name: "Salsa", grade: 50}
+];
+
+const totalGrades = studentsGrade.reduce((acc, s) => acc + s.grade, 0);
+console.log(totalGrades);
