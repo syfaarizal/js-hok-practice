@@ -211,3 +211,22 @@ const userMap = usersName.reduce((acc, val) => {
   return acc;
 }, {});
 console.log(userMap);
+
+const transactions = [
+  { user: "Syfa", type: "income", amount: 500 },
+  { user: "Syfa", type: "expense", amount: 200 },
+  { user: "Budi", type: "income", amount: 800 },
+  { user: "Budi", type: "expense", amount: 300 },
+];
+const balance = transactions.reduce((acc, val) => {
+  if (!acc[val.user]) {
+    acc[val.user] = 0;
+  }
+  if (val.type === "income") {
+    acc[val.user] += val.amount;
+  } else {
+    acc[val.user] -= val.amount;
+  }
+  return acc;
+}, {});
+console.log(balance);
