@@ -174,3 +174,29 @@ const double = angkaIni.reduce((acc, val) => {
   return acc;
 }, []);
 console.log(double);
+
+// Challenge reduce Level 2
+const cart = [
+  { name: "Laptop", price: 1500 },
+  { name: "Keyboard", price: 300 },
+  { name: "Mouse", price: 150 },
+];
+const totalHarga = cart.reduce((acc, val) => acc + val.price * 1.1, 0);
+console.log(`Total (termasuk pajak): ${totalHarga}`)
+
+const items = [
+  { name: "Laptop", type: "Electronics" },
+  { name: "Banana", type: "Food" },
+  { name: "Mouse", type: "Electronics" },
+  { name: "Bread", type: "Food" }
+];
+// Kelompokkan produk berdasarkan type
+const groupedItems = items.reduce((acc, val) => {
+  if (acc[val.type]) { // Jika tipe sudah ada, tambahkan ke array
+    acc[val.type].push(val); //
+  } else { // Jika tipe belum ada, buat array baru
+    acc[val.type] = [val];
+  }
+  return acc;
+}, {});
+console.log(groupedItems);
