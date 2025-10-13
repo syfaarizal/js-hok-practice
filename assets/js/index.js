@@ -148,32 +148,29 @@ console.log(totalAngka);
 
 const userss = ["Sylus", "Zayne", "Xavier"];
 
-const sentence = userss.reduce((acc, u) => acc + u + ", ", " ");
+const sentence = userss.reduce((acc, u) => acc + u + ", ", "");
 console.log(sentence);
 
-const numbers = [1, 2, 3];
+// Challenge reduce Level 1
+const numbers = [10, 20, 30, 40];
+const totalNumbers = numbers.reduce((acc, val) => acc + val, 0);
+console.log(totalNumbers);
 
-const double = numbers.reduce((acc, n) => {
-  acc.push (n * 2);
+const productss = [
+  { name: "Laptop", price: 1500 },
+  { name: "Keyboard", price: 500 },
+  { name: "Mouse", price: 200 }
+];
+const totalPricee = productss.reduce((acc, val) => acc + val.price, 0);
+console.log(`Total Price: ${totalPricee}`);
+
+const names = ["Syfa", "Budi", "Ani"];
+const totalHuruf = names.reduce((acc, val) => acc + val.length, 0);
+console.log(totalHuruf);
+
+const angkaIni = [1, 2, 3];
+const double = angkaIni.reduce((acc, val) => {
+  acc.push(val * 2)
   return acc;
 }, []);
 console.log(double);
-
-const productsPrice = [
-  {name: "Laptop", price: 1500},
-  {name: "Keyboard", price: 500},
-  {name: "Mouse", price: 200}
-];
-
-const totalPrices = productsPrice.reduce((acc, p) => acc + p.price, 0);
-console.log(totalPrices);
-
-const studentsGrade = [
-  {name: "Dodo", grade: 90},
-  {name: "Budi", grade: 60},
-  {name: "Ani", grade: 75},
-  {name: "Salsa", grade: 50}
-];
-
-const totalGrades = studentsGrade.reduce((acc, s) => acc + s.grade, 0);
-console.log(totalGrades);
