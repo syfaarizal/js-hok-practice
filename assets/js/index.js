@@ -190,13 +190,24 @@ const items = [
   { name: "Mouse", type: "Electronics" },
   { name: "Bread", type: "Food" }
 ];
-// Kelompokkan produk berdasarkan type
+
 const groupedItems = items.reduce((acc, val) => {
-  if (acc[val.type]) { // Jika tipe sudah ada, tambahkan ke array
-    acc[val.type].push(val); //
-  } else { // Jika tipe belum ada, buat array baru
-    acc[val.type] = [val];
+  if (!acc[val.type]) {
+    acc[val.type] = [];
+  } else {
+    acc[val.type].push(val.name);
   }
   return acc;
 }, {});
 console.log(groupedItems);
+
+const usersName = [
+  { id: 1, name: "Syfa", age: 20 },
+  { id: 2, name: "Budi", age: 25 },
+  { id: 3, name: "Ani", age: 22 }
+];
+const userMap = usersName.reduce((acc, val) => {
+  acc[val.id] = val;
+  return acc;
+}, {});
+console.log(userMap);
