@@ -202,7 +202,7 @@ const items = [
   {name: "Headphone", category: "Elektronik" }
 ];
 const groupedItems = items.reduce((acc, val) => {
-  if(acc[val.category]) acc[val.category] = [];
+  if(!acc[val.category]) acc[val.category] = [];
   acc[val.category].push(val.name);
   return acc;
 }, {});
