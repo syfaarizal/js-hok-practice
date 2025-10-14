@@ -194,3 +194,16 @@ const userMap = usersName.reduce((acc, val) => {
   return acc;
 }, {});
 console.log(userMap);
+
+const items = [
+  {name: "Pulpen", category: "Alat Tulis" },
+  {name: "Buku", category: "Alat Tulis" },
+  {name: "Laptop", category: "Elektronik" },
+  {name: "Headphone", category: "Elektronik" }
+];
+const groupedItems = items.reduce((acc, val) => {
+  if(acc[val.category]) acc[val.category] = [];
+  acc[val.category].push(val.name);
+  return acc;
+}, {});
+console.log(groupedItems);
