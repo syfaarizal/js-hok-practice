@@ -184,23 +184,6 @@ const cart = [
 const totalHarga = cart.reduce((acc, val) => acc + val.price * 1.1, 0);
 console.log(`Total (termasuk pajak): ${totalHarga}`)
 
-const items = [
-  { name: "Laptop", type: "Electronics" },
-  { name: "Banana", type: "Food" },
-  { name: "Mouse", type: "Electronics" },
-  { name: "Bread", type: "Food" }
-];
-
-const groupedItems = items.reduce((acc, val) => {
-  if (!acc[val.type]) {
-    acc[val.type] = [];
-  } else {
-    acc[val.type].push(val.name);
-  }
-  return acc;
-}, {});
-console.log(groupedItems);
-
 const usersName = [
   { id: 1, name: "Syfa", age: 20 },
   { id: 2, name: "Budi", age: 25 },
@@ -211,22 +194,3 @@ const userMap = usersName.reduce((acc, val) => {
   return acc;
 }, {});
 console.log(userMap);
-
-const transactions = [
-  { user: "Syfa", type: "income", amount: 500 },
-  { user: "Syfa", type: "expense", amount: 200 },
-  { user: "Budi", type: "income", amount: 800 },
-  { user: "Budi", type: "expense", amount: 300 },
-];
-const balance = transactions.reduce((acc, val) => {
-  if (!acc[val.user]) {
-    acc[val.user] = 0;
-  }
-  if (val.type === "income") {
-    acc[val.user] += val.amount;
-  } else {
-    acc[val.user] -= val.amount;
-  }
-  return acc;
-}, {});
-console.log(balance);
