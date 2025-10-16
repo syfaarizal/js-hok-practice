@@ -207,3 +207,21 @@ const groupedItems = items.reduce((acc, val) => {
   return acc;
 }, {});
 console.log(groupedItems);
+
+// Challenge reduce Level 3
+const transactions = [
+  { id: 1, type: "deposit", amount: 1000 },
+  { id: 2, type: "withdrawal", amount: 500 },
+  { id: 3, type: "deposit", amount: 200 },
+  { id: 4, type: "withdrawal", amount: 300 },
+  { id: 5, type: "deposit", amount: 400 }
+];
+const balance = transactions.reduce((acc, val) => {
+  if(val.type === "deposit") {
+    acc += val.amount;
+  } else {
+    acc -= val.amount;
+  }
+  return acc;
+}, 0);
+console.log(balance);
