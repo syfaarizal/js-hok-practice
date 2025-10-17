@@ -225,3 +225,22 @@ const balance = transactions.reduce((acc, val) => {
   return acc;
 }, 0);
 console.log(balance);
+
+// Ganjil Genap Kelipatan 10 forEach
+
+const numbersForEach = [10, 15, 20, 25, 30, 35, 40];
+numbersForEach.forEach(num => {
+  if(num % 2 === 0) {
+    console.log(`${num} adalah bilangan genap`);
+  } else {
+    console.log(`${num} adalah bilangan ganjil`);
+  }
+});
+
+const kelipatan10 = [];
+numbersForEach.forEach(num => {
+  if(num % 10 === 0) {
+    kelipatan10.push(num);
+  }
+});
+console.log(kelipatan10);
