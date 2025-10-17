@@ -244,3 +244,17 @@ numbersForEach.forEach(num => {
   }
 });
 console.log(kelipatan10);
+
+const hitungKategori = (arr) => {
+  let summary = {ganjil: 0, genap: 0, kelipatan10: 0};
+
+  arr.forEach(num => {
+    if (num % 10 === 0) summary.kelipatan10 ++;
+    else if (num % 2 === 0) summary.genap ++;
+    else summary.ganjil ++;
+  })
+
+  return summary;
+}
+
+console.log(hitungKategori([5, 10, 15, 20, 25, 30, 33])); 
