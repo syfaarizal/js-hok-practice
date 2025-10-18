@@ -258,3 +258,25 @@ const hitungKategori = (arr) => {
 }
 
 console.log(hitungKategori([5, 10, 15, 20, 25, 30, 33])); 
+
+// forEach Challenge Level 1
+const fruits = ["Apple", "Banana", "Cherry"];
+fruits.forEach(fruit => console.log(fruit));
+
+const numberss = [1, 2, 3, 4, 5];
+numberss.forEach(num => console.log(num));
+
+const transactionss = [
+  { id: 1, type: "deposit", amount: 1000 },
+  { id: 2, type: "withdrawal", amount: 500 },
+  { id: 3, type: "deposit", amount: 200 },
+  { id: 4, type: "withdrawal", amount: 300 },
+  { id: 5, type: "deposit", amount: 400 }
+];
+transactionss.forEach(transaction => {
+  if(transaction.type === "deposit") {
+    console.log(`Deposit ${transaction.amount}`);
+  } else {
+    console.log(`Withdrawal ${transaction.amount}`);
+  }
+});
