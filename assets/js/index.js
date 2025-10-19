@@ -280,3 +280,18 @@ transactionss.forEach(transaction => {
     console.log(`Withdrawal ${transaction.amount}`);
   }
 });
+
+// forEach Challenge Level 2
+const studentsss = [
+  { name: "Dodo", grade: 90 },
+  { name: "Budi", grade: 60 },
+  { name: "Ani", grade: 75 },
+  { name: "Siska", grade: 85 }
+];
+studentsss.forEach(student => {
+  if(student.grade >= 75) {
+    console.log(`${student.name} Lulus (Nilai: ${student.grade})`);
+  } else {
+    console.log(`${student.name} Tidak Lulus (Nilai: ${student.grade})`);
+  }
+});
