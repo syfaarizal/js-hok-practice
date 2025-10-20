@@ -295,3 +295,12 @@ studentsss.forEach(student => {
     console.log(`${student.name} Tidak Lulus (Nilai: ${student.grade})`);
   }
 });
+
+const productssss = [
+  { name: "Laptop", price: 1500 },
+  { name: "Keyboard", price: 500 },
+  { name: "Mouse", price: 200 }
+];
+productssss.forEach(product => {
+  console.log(`Harga ${product.name}: ${product.price}`);
+});
