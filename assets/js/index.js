@@ -304,3 +304,12 @@ const productssss = [
 productssss.forEach(product => {
   console.log(`Harga ${product.name}: ${product.price}`);
 });
+
+// add logic to display full name and age
+const apiUserss = [
+  { first_name: "Siska", last_name: "Putri", age: 20 },
+  { first_name: "Budi", last_name: "Santoso", age: 16 }
+];
+apiUserss.forEach(user => {
+  console.log(`Nama: ${user.first_name} ${user.last_name}, Umur: ${user.age}`);
+});
