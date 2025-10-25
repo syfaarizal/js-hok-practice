@@ -313,3 +313,14 @@ const apiUserss = [
 apiUserss.forEach(user => {
   console.log(`Nama: ${user.first_name} ${user.last_name}, Umur: ${user.age}`);
 });
+
+// Mix Method Challenge
+const employees = [
+  { name: "Syfa", salary: 3000, active: true },
+  { name: "Budi", salary: 5000, active: false },
+  { name: "Ani", salary: 4000, active: true }
+];
+
+const activeEmployees = employees.filter (e => e.active);
+const totalSalary = activeEmployees.reduce((acc, e) => acc + e.salary, 0);
+console.log(totalSalary); 
