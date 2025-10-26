@@ -324,3 +324,22 @@ const employees = [
 const activeEmployees = employees.filter (e => e.active);
 const totalSalary = activeEmployees.reduce((acc, e) => acc + e.salary, 0);
 console.log(totalSalary); 
+const employeeNames = employees.map (e => e.name);
+console.log(employeeNames);
+
+// Mix Method Challenge 2
+const orders = [
+  { id: 1, amount: 250, status: "completed" },
+  { id: 2, amount: 400, status: "pending" },
+  { id: 3, amount: 300, status: "completed" },
+  { id: 4, amount: 550, status: "pending" },
+  { id: 5, amount: 200, status: "completed" }
+];
+
+const completedOrders = orders.filter (o => o.status === "completed");
+const totalAmount = completedOrders.reduce((acc, o) => acc + o.amount, 0);
+const averageAmount = totalAmount / completedOrders.length;
+console.log(averageAmount); // add logic to calculate average amount of completed orders
+
+const orderIds = orders.map (o => o.id);
+console.log(orderIds);
