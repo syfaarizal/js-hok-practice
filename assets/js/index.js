@@ -339,7 +339,19 @@ const orders = [
 const completedOrders = orders.filter (o => o.status === "completed");
 const totalAmount = completedOrders.reduce((acc, o) => acc + o.amount, 0);
 const averageAmount = totalAmount / completedOrders.length;
-console.log(averageAmount); // add logic to calculate average amount of completed orders
+console.log(averageAmount); 
 
 const orderIds = orders.map (o => o.id);
 console.log(orderIds);
+
+// Mix Method Challenge 3
+const books = [
+  { title: "Book A", author: "Author 1", rating: 4.5 },
+  { title: "Book B", author: "Author 2", rating: 3.8 },
+  { title: "Book C", author: "Author 3", rating: 4.2 },
+  { title: "Book D", author: "Author 4", rating: 2.9 }
+];
+
+const topRatedBooks = books.filter (b => b.rating >= 4);
+const bookTitles = topRatedBooks.map (b => b.title);
+console.log(bookTitles); 
