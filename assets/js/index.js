@@ -355,3 +355,16 @@ const books = [
 const topRatedBooks = books.filter (b => b.rating >= 4);
 const bookTitles = topRatedBooks.map (b => b.title);
 console.log(bookTitles); 
+
+const bookAuthors = topRatedBooks.map (b => b.author);
+console.log(bookAuthors);
+
+const bookRatings = topRatedBooks.map (b => b.rating);
+console.log(bookRatings);
+
+const bookInfo = topRatedBooks.map (b => ({
+  title: b.title,
+  author: b.author,
+  rating: b.rating
+}));
+console.log(bookInfo); 
