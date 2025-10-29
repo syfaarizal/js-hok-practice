@@ -368,3 +368,15 @@ const bookInfo = topRatedBooks.map (b => ({
   rating: b.rating
 }));
 console.log(bookInfo); 
+
+const bookSummary = topRatedBooks.map (b => ({
+  title: b.title,
+  rating: b.rating
+}));
+console.log(bookSummary);
+
+const bookDetails = topRatedBooks.map (b => ({
+  title: b.title,
+  author: b.author
+}));
+console.log(bookDetails);
