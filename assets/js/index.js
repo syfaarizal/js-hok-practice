@@ -380,3 +380,36 @@ const bookDetails = topRatedBooks.map (b => ({
   author: b.author
 }));
 console.log(bookDetails);
+
+//obeject methods
+const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    fullName() {
+        return `${this.firstName} ${this.lastName}: ${this.age} years old`; 
+    }
+};
+
+console.log(person.fullName());
+
+// method di dalam method
+const calculator = {
+    add(a, b) { 
+        return a + b;
+    },
+    subtract(a, b) {
+        return a - b;
+    },
+    multiply(a, b) {
+        return a * b;
+    },
+    divide(a, b) {
+        return a / b;
+    }
+};
+
+console.log(calculator.add(2, 3));
+console.log(calculator.subtract(5, 2));
+console.log(calculator.multiply(4, 6));
+console.log(calculator.divide(10, 2));
