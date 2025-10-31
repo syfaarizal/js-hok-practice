@@ -413,3 +413,15 @@ console.log(calculator.add(2, 3));
 console.log(calculator.subtract(5, 2));
 console.log(calculator.multiply(4, 6));
 console.log(calculator.divide(10, 2));
+
+const user = {
+    name: "Alice",
+    age: 25,
+    updateAge(newAge) {
+        this.age = newAge; 
+    }
+};
+
+console.log(`Sebelum update: ${user.age}`);
+user.updateAge(30);
+console.log(`Sesudah update: ${user.age}`);
