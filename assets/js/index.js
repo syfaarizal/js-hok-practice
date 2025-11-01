@@ -425,3 +425,14 @@ const user = {
 console.log(`Sebelum update: ${user.age}`);
 user.updateAge(30);
 console.log(`Sesudah update: ${user.age}`);
+
+const personBMI = {
+    name: "Bob",
+    weight: 80, 
+    height: 1.8, 
+    calculateBMI() {
+        return this.weight / (this.height * this.height);
+    }
+};
+
+console.log(`${personBMI.name}'s BMI: ${personBMI.calculateBMI()}`);
