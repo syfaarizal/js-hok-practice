@@ -436,3 +436,22 @@ const personBMI = {
 };
 
 console.log(`${personBMI.name}'s BMI: ${personBMI.calculateBMI()}`);
+
+const rectangle = {
+    length: 10,
+    width: 5,
+    area() {
+        return this.length * this.width;
+    }
+};
+
+console.log(`Luas persegi panjang: ${rectangle.area()}`);
+
+const circle = {
+    radius: 7,
+    circumference() {
+        return 2 * Math.PI * this.radius;
+    }
+};
+
+console.log(`Keliling lingkaran: ${circle.circumference()}`);
