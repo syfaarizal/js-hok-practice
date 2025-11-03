@@ -455,3 +455,16 @@ const circle = {
 };
 
 console.log(`Keliling lingkaran: ${circle.circumference()}`);
+
+// Challenge Object Method 1
+const bankAccount = {
+    accountHolder: "Syfa",
+    balance: 5000,
+    deposit(amount) {
+        this.balance += amount;
+    } 
+};
+console.log(`Saldo sebelum deposit: ${bankAccount.balance}`);
+bankAccount.deposit(2000);
+console.log(`Saldo sesudah deposit: ${bankAccount.balance}`);
+
