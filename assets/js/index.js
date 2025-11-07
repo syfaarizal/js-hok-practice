@@ -510,3 +510,21 @@ console.log(merkMobil);
 console.log(modelMobil);
 console.log(tahunMobil);
 
+// hard level destructuring
+const userProfile = {
+    username: "syfa123",
+    password: "password123",
+    email: "M0T9u@example.com",
+    address: {
+        street: "Jl. Merdeka No. 10",
+        city: "Jakarta",
+        country: "Indonesia"
+    }
+};
+const { username, password, email, address: { street, city, country } } = userProfile;
+console.log(username);
+console.log(password);
+console.log(email);
+console.log(street);
+console.log(city);
+console.log(country);
