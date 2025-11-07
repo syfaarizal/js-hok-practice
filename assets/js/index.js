@@ -528,3 +528,19 @@ console.log(email);
 console.log(street);
 console.log(city);
 console.log(country);
+
+// hard level destructuring 2 combine with array
+const data = {
+    users: [
+        { username: "user1", password: "password1" },
+        { username: "user2", password: "password2" },
+        { username: "user3", password: "password3" }
+    ]
+};
+const { users: [ { username: user1, password: pass1 }, { username: user2, password: pass2 }, { username: user3, password: pass3 } ] } = data;
+console.log(user1);
+console.log(pass1);
+console.log(user2);
+console.log(pass2);
+console.log(user3);
+console.log(pass3);
