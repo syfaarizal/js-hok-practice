@@ -544,3 +544,22 @@ console.log(user2);
 console.log(pass2);
 console.log(user3);
 console.log(pass3);
+
+// Challenge Destructuring Level 3
+const order = {
+    orderId: 12345,
+    customer: {
+        name: "Syfa",
+        address: {
+            street: "Jl. Merdeka No. 10",
+            city: "Jakarta",
+            country: "Indonesia"
+        } 
+    }
+};
+const { orderId, customer: { name: customerName, address: { street: customerStreet, city: customerCity, country: customerCountry } } } = order;
+console.log(orderId);
+console.log(customerName);
+console.log(customerStreet);
+console.log(customerCity);
+console.log(customerCountry);
