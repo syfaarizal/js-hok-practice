@@ -499,3 +499,14 @@ console.log(judul);
 console.log(penulis);
 console.log(tahunTerbit);
 
+// Challenge Destructuring 1
+const mobil = {
+    merk: "Toyota",
+    model: "Camry",
+    tahun: 2022
+};
+const { merk: merkMobil, model: modelMobil, tahun: tahunMobil } = mobil;
+console.log(merkMobil);
+console.log(modelMobil);
+console.log(tahunMobil);
+
