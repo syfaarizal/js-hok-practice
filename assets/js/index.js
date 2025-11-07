@@ -468,3 +468,34 @@ console.log(`Saldo sebelum deposit: ${bankAccount.balance}`);
 bankAccount.deposit(2000);
 console.log(`Saldo sesudah deposit: ${bankAccount.balance}`);
 
+// Destructuring
+const mahasiswa = {
+    nama: "Dodo",
+    umur: 21,
+    jurusan: "Informatika"
+};
+const { nama, umur, jurusan } = mahasiswa;
+console.log(nama);
+console.log(umur);
+console.log(jurusan);
+
+const laptop = {
+    merk: "Dell",
+    model: "XPS 13",
+    tahun: 2021
+};
+const { merk, model, tahun } = laptop;
+console.log(merk);
+console.log(model);
+console.log(tahun);
+
+const buku = {
+    judul: "JavaScript for Beginners",
+    penulis: "Jane Doe",
+    tahunTerbit: 2020
+};
+const { judul, penulis, tahunTerbit } = buku;
+console.log(judul);
+console.log(penulis);
+console.log(tahunTerbit);
+
