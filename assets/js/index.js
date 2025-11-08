@@ -563,3 +563,16 @@ console.log(customerName);
 console.log(customerStreet);
 console.log(customerCity);
 console.log(customerCountry);
+
+// object destructuring in function parameter
+function displayUserInfo({ name, age, email }) {
+    console.log(`Name: ${name}`);
+    console.log(`Age: ${age}`);
+    console.log(`Email: ${email}`);
+}
+const userInfo = {
+    name: "Budi",
+    age: 28,
+    email: "3BxkT@example.com"
+};
+displayUserInfo(userInfo);
