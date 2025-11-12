@@ -587,3 +587,9 @@ const obj1 = { a: 1, b: 2 };
 const obj2 = { c: 3, d: 4 };
 const combinedObj = { ...obj1, ...obj2 };
 console.log(combinedObj);
+
+// Rest Operator
+function sum(...numbers) {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+console.log(sum(1, 2, 3, 4, 5));
