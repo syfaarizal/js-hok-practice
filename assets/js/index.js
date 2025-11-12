@@ -593,3 +593,10 @@ function sum(...numbers) {
     return numbers.reduce((acc, curr) => acc + curr, 0);
 }
 console.log(sum(1, 2, 3, 4, 5));
+
+function introduce(name, age, ...hobbies) {
+    console.log(`Name: ${name}`);
+    console.log(`Age: ${age}`);
+    console.log(`Hobbies: ${hobbies.join(", ")}`);
+}
+introduce("Syfa", 21, "Membaca", "Menulis", "Menggambar");
