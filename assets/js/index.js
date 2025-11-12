@@ -576,3 +576,10 @@ const userInfo = {
     email: "3BxkT@example.com"
 };
 displayUserInfo(userInfo);
+
+// Spread & Rest Operator
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combinedArr = [...arr1, ...arr2];
+console.log(combinedArr);
+
