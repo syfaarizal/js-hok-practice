@@ -607,3 +607,13 @@ const [first, second, ...rest] = numbersNih;
 console.log(first);
 console.log(second);
 console.log(rest);
+
+const personNih = {
+    name: "Ani",
+    age: 22,
+    hobbies: ["Membaca", "Menulis", "Menggambar"]
+};
+const { name, age, ...hobbies } = personNih;
+console.log(name);
+console.log(age);
+console.log(hobbies);
