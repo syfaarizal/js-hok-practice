@@ -633,3 +633,19 @@ function multiply(factor, ...nums) {
     return nums.map(num => num * factor);
 }
 console.log(multiply(2, 1, 2, 3, 4, 5));
+
+// Challenge Spread & Rest Operator Level 2
+const fruitsNih = ["Apple", "Banana", "Cherry"];
+const moreFruits = ["Mango", "Pineapple"];
+const allFruits = [...fruitsNih, ...moreFruits];
+console.log(allFruits);
+
+const settings = { theme: "dark", fontSize: 14 };
+const newSettings = { ...settings, fontSize: 16, language: "en" };
+console.log(newSettings);
+
+function createUser(username, email, ...roles) {
+    return { username, email, roles };
+}
+const userNih = createUser("syfa123", "M0T9u@example.com", "admin", "user");
+console.log(userNih);
