@@ -617,3 +617,14 @@ const { name, age, ...hobbies } = personNih;
 console.log(name);
 console.log(age);
 console.log(hobbies);
+
+// Challenge Spread Operator
+const arrA = [10, 20, 30];
+const arrB = [40, 50, 60];
+const mergedArr = [...arrA, ...arrB];
+console.log(mergedArr);
+
+const objA = { x: 1, y: 2 };
+const objB = { z: 3, w: 4 };
+const mergedObj = { ...objA, ...objB };
+console.log(mergedObj);
