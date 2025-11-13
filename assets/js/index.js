@@ -628,3 +628,8 @@ const objA = { x: 1, y: 2 };
 const objB = { z: 3, w: 4 };
 const mergedObj = { ...objA, ...objB };
 console.log(mergedObj);
+
+function multiply(factor, ...nums) {
+    return nums.map(num => num * factor);
+}
+console.log(multiply(2, 1, 2, 3, 4, 5));
