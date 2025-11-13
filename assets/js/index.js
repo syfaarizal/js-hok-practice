@@ -663,3 +663,9 @@ const customConfig = {
     database: "my_new_database"
 };
 console.log(customConfig);
+
+function calculateAverage(...nums) {
+    const total = nums.reduce((acc, curr) => acc + curr, 0);
+    return total / nums.length;
+}
+console.log(calculateAverage(1, 2, 3, 4, 5));
