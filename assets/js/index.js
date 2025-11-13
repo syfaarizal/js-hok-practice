@@ -649,3 +649,17 @@ function createUser(username, email, ...roles) {
 }
 const userNih = createUser("syfa123", "M0T9u@example.com", "admin", "user");
 console.log(userNih);
+
+// Challenge Spread & Rest Operator Level 3
+const defaultConfig = {
+    host: "localhost",
+    port: 3000,
+    database: "my_database"
+};
+const customConfig = {
+    ...defaultConfig,
+    host: "127.0.0.1",
+    port: 3306,
+    database: "my_new_database"
+};
+console.log(customConfig);
