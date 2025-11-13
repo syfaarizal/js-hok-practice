@@ -600,3 +600,10 @@ function introduce(name, age, ...hobbies) {
     console.log(`Hobbies: ${hobbies.join(", ")}`);
 }
 introduce("Syfa", 21, "Membaca", "Menulis", "Menggambar");
+
+// Challenge Rest Operator
+const numbersNih = [1, 2, 3, 4, 5];
+const [first, second, ...rest] = numbersNih;
+console.log(first);
+console.log(second);
+console.log(rest);
