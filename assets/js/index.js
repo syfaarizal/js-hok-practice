@@ -669,3 +669,23 @@ function calculateAverage(...nums) {
     return total / nums.length;
 }
 console.log(calculateAverage(1, 2, 3, 4, 5));
+
+// Manipulasi Element
+document.getElementById("manipulateBtn").addEventListener("click", function() {
+    document.getElementById("manipulateTitle").innerHTML = "Judul telah diubah!";
+});
+document.getElementById("changeColorBtn").addEventListener("click", function() {
+    document.getElementById("colorBox").style.backgroundColor = "lightblue";
+});
+document.getElementById("addItemBtn").addEventListener("click", function() {
+    const list = document.getElementById("itemList");
+    const newItem = document.createElement("li");
+    newItem.textContent = "Item Baru";
+    list.appendChild(newItem);
+});
+document.getElementById("removeItemBtn").addEventListener("click", function() {
+    const list = document.getElementById("itemList");
+    if(list.lastChild) {
+        list.removeChild(list.lastChild);
+    }
+});
