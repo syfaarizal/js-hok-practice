@@ -712,3 +712,11 @@ document.getElementById("emailInput").addEventListener("input", function() {
     const email = document.getElementById("emailInput").value;
     document.getElementById("emailDisplay").innerText = `Email Anda: ${email}`;
 });
+
+// Challenge Form Handling
+document.getElementById("loginBtn").addEventListener("click", function(event) {
+    event.preventDefault(); 
+    const username = document.getElementById("usernameInput").value;
+    const password = document.getElementById("passwordInput").value;
+    alert(`Username: ${username}\nPassword: ${password}`);
+});
