@@ -707,6 +707,7 @@ document.getElementById("nameInput").addEventListener("input", function() {
     const name = document.getElementById("nameInput").value;
     document.getElementById("nameDisplay").innerText = `Nama Anda: ${name}`;
 });
+
 document.getElementById("emailInput").addEventListener("input", function() {
     const email = document.getElementById("emailInput").value;
     document.getElementById("emailDisplay").innerText = `Email Anda: ${email}`;
