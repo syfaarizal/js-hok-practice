@@ -720,3 +720,7 @@ document.getElementById("loginBtn").addEventListener("click", function(event) {
     const password = document.getElementById("passwordInput").value;
     alert(`Username: ${username}\nPassword: ${password}`);
 });
+
+document.getElementById("resetBtn").addEventListener("click", function() {
+    document.getElementById("loginForm").reset();
+});
