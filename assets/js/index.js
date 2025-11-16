@@ -675,7 +675,7 @@ document.getElementById("manipulateBtn").addEventListener("click", function() {
     document.getElementById("manipulateTitle").innerHTML = "Judul telah diubah!";
 });
 document.getElementById("changeColorBtn").addEventListener("click", function() {
-    document.getElementById("colorBox").style.backgroundColor = "lightblue";
+    document.getElementById("colorBox").style.backgroundColor = "blue";
 });
 document.getElementById("addItemBtn").addEventListener("click", function() {
     const list = document.getElementById("itemList");
