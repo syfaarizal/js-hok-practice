@@ -190,10 +190,10 @@ const usersName = [
   { id: 3, name: "Ani", age: 22 }
 ];
 const userMap = usersName.reduce((acc, val) => {
-  acc[val.id] = val;
+  acc[val.id] = val; 
   return acc;
 }, {});
-console.log(userMap);
+console.log(userMap); // Output: { 1: { id: 1, name: 'Syfa', age: 20 }, 2: { id: 2, name: 'Budi', age: 25 }, 3: { id: 3, name: 'Ani', age: 22 } }
 
 const items = [
   {name: "Pulpen", category: "Alat Tulis" },
@@ -206,7 +206,7 @@ const groupedItems = items.reduce((acc, val) => {
   acc[val.category].push(val.name);
   return acc;
 }, {});
-console.log(groupedItems);
+console.log(groupedItems); // Output: { 'Alat Tulis': [ 'Pulpen', 'Buku' ], Elektronik: [ 'Laptop', 'Headphone' ] }
 
 // Challenge reduce Level 3
 const transactions = [
@@ -217,17 +217,16 @@ const transactions = [
   { id: 5, type: "deposit", amount: 400 }
 ];
 const balance = transactions.reduce((acc, val) => {
-  if(val.type === "deposit") {
-    acc += val.amount;
+  if(val.type === "deposit") { // cek tipe transaksi
+    acc += val.amount; // menambahkan jumlah deposit ke saldo
   } else {
-    acc -= val.amount;
+    acc -= val.amount; // mengurangi jumlah withdrawal dari saldo
   }
-  return acc;
+  return acc; // mengembalikan saldo yang telah diperbarui
 }, 0);
-console.log(balance);
+console.log(balance); // Output: 800 karena (1000 - 500 + 200 - 300 + 400)
 
 // Ganjil Genap Kelipatan 10 forEach
-
 const numbersForEach = [10, 15, 20, 25, 30, 35, 40];
 numbersForEach.forEach(num => {
   if(num % 2 === 0) {
