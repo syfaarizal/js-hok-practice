@@ -95,8 +95,8 @@ const users = [
 
 const activeUserEmails = users
     .filter (u => u.active)
-    .map (u => `${u.name} - ${u.email}`);
-console.log(activeUserEmails);
+    .map (u => `${u.name} - ${u.email}`); 
+console.log(activeUserEmails); // [ 'Sisi - sisi@gmail.com', 'Ani - ani@gmail.com' ]
 
 // Challenge 2 - Diskon produk mahal
 const productsName = [
@@ -112,7 +112,7 @@ const discountedExpensiveProducts = productsName
         ...p,
         price: p.price * 0.9
     }));
-console.log(discountedExpensiveProducts);
+console.log(discountedExpensiveProducts); // [ { name: 'Laptop', price: 1350 }, { name: 'Monitor', price: 1080 } ]
 
 // Challenge 3 - Filter murid lulus + ubah format tampilan
 const studentsName = [
@@ -123,14 +123,14 @@ const studentsName = [
 ];
 
 const formattedPassingStudents = studentsName
-    .filter (s => s.grade >= 75)
-    .map (s => `${s.name} - Lulus (Nilai: ${s.grade})`);
-console.log(formattedPassingStudents);
+    .filter (s => s.grade <= 75)
+    .map (s => `${s.name} - Tidak Lulus (Nilai: ${s.grade})`); // Format tampilan sesuai permintaan
+console.log(formattedPassingStudents); // [ 'Budi - Tidak Lulus (Nilai: 60)', 'Salsa - Tidak Lulus (Nilai: 50)' ]
 
 // Reduce
 let nilai = [10, 20, 30, 40, 50];
-let totalNilai = nilai.reduce( (accumulator, currentValue) => accumulator + currentValue);
-console.log(totalNilai);
+let totalNilai = nilai.reduce((accumulator, currentValue) => accumulator + currentValue);
+console.log(totalNilai); // Output: 150
 
 const nameProducts = [
   {name: "Laptop", price: 1500},
@@ -138,23 +138,23 @@ const nameProducts = [
   {name: "LMouse", price: 200}
 ];
 
-const totalPrice = nameProducts.reduce((acc, u) => acc + u.price, 0);
-console.log(totalPrice);
+const totalPrice = nameProducts.reduce((acc, u) => acc + u.price, 0); 
+console.log(totalPrice); // Output: 2200
 
 const angkaNih = [10, 20, 30];
 
 const totalAngka = angkaNih.reduce((ac, a) => ac + a);
-console.log(totalAngka);
+console.log(totalAngka); // Output: 60
 
 const userss = ["Sylus", "Zayne", "Xavier"];
 
 const sentence = userss.reduce((acc, u) => acc + u + ", ", "");
-console.log(sentence);
+console.log(sentence); // Output: "Sylus, Zayne, Xavier, "
 
 // Challenge reduce Level 1
 const numbers = [10, 20, 30, 40];
 const totalNumbers = numbers.reduce((acc, val) => acc + val, 0);
-console.log(totalNumbers);
+console.log(totalNumbers); // Output: 100
 
 const productss = [
   { name: "Laptop", price: 1500 },
@@ -162,18 +162,18 @@ const productss = [
   { name: "Mouse", price: 200 }
 ];
 const totalPricee = productss.reduce((acc, val) => acc + val.price, 0);
-console.log(`Total Price: ${totalPricee}`);
+console.log(`Total Price: ${totalPricee}`); // Output: Total Price: 2200
 
 const names = ["Syfa", "Budi", "Ani"];
 const totalHuruf = names.reduce((acc, val) => acc + val.length, 0);
-console.log(totalHuruf);
+console.log(totalHuruf); // Output: 11
 
 const angkaIni = [1, 2, 3];
 const double = angkaIni.reduce((acc, val) => {
-  acc.push(val * 2)
+  acc.push(val * 2) 
   return acc;
 }, []);
-console.log(double);
+console.log(double); // Output: [2, 4, 6]
 
 // Challenge reduce Level 2
 const cart = [
@@ -182,7 +182,7 @@ const cart = [
   { name: "Mouse", price: 150 },
 ];
 const totalHarga = cart.reduce((acc, val) => acc + val.price * 1.1, 0);
-console.log(`Total (termasuk pajak): ${totalHarga}`)
+console.log(`Total (termasuk pajak): ${totalHarga}`); // Output: Total (termasuk pajak): 2200
 
 const usersName = [
   { id: 1, name: "Syfa", age: 20 },
