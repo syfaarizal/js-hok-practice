@@ -689,37 +689,7 @@ document.getElementById("removeItemBtn").addEventListener("click", function() {
     }
 });
 
-// Form Handling
-document.getElementById("submitBtn").addEventListener("click", function(event) {
-    event.preventDefault(); 
-    const name = document.getElementById("nameInput").value;
-    const email = document.getElementById("emailInput").value;
-    alert(`Nama: ${name}\nEmail: ${email}`);
-});
-
-document.getElementById("resetBtn").addEventListener("click", function() {
-    document.getElementById("userForm").reset();
-});
-
-// Add more form handling features
-document.getElementById("nameInput").addEventListener("input", function() {
-    const name = document.getElementById("nameInput").value;
-    document.getElementById("nameDisplay").innerText = `Nama Anda: ${name}`;
-});
-
-document.getElementById("emailInput").addEventListener("input", function() {
-    const email = document.getElementById("emailInput").value;
-    document.getElementById("emailDisplay").innerText = `Email Anda: ${email}`;
-});
-
-// Challenge Form Handling
-document.getElementById("loginBtn").addEventListener("click", function(event) {
-    event.preventDefault(); 
-    const username = document.getElementById("usernameInput").value;
-    const password = document.getElementById("passwordInput").value;
-    alert(`Username: ${username}\nPassword: ${password}`);
-});
-
-document.getElementById("resetBtn").addEventListener("click", function() {
-    document.getElementById("loginForm").reset();
+// Challenge Manipulasi Element
+document.getElementById("updateHeaderBtn").addEventListener("click", function() {
+    document.getElementById("header").innerHTML = "Header Telah Diupdate!";
 });
