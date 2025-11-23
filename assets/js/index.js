@@ -693,3 +693,7 @@ document.getElementById("removeItemBtn").addEventListener("click", function() {
 document.getElementById("updateHeaderBtn").addEventListener("click", function() {
     document.getElementById("header").innerHTML = "Header Telah Diupdate!";
 });
+
+document.getElementById("updateImageBtn").addEventListener("click", function() {
+    document.getElementById("image").src = "/pinkpict.jpg";
+});
