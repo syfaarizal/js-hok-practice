@@ -697,3 +697,11 @@ document.getElementById("updateHeaderBtn").addEventListener("click", function() 
 document.getElementById("updateImageBtn").addEventListener("click", function() {
     document.getElementById("image").src = "/pinkpict.jpg";
 });
+
+// Add item to list
+document.getElementById("addListItemBtn").addEventListener("click", function() {
+    const list = document.getElementById("myList");
+    const newItem = document.createElement("li");
+    newItem.textContent = "Item Baru";
+    list.appendChild(newItem);
+});
