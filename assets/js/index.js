@@ -705,3 +705,11 @@ document.getElementById("addListItemBtn").addEventListener("click", function() {
     newItem.textContent = "Item Baru";
     list.appendChild(newItem);
 });
+
+// Remove last item from list
+document.getElementById("removeListItemBtn").addEventListener("click", function() {
+    const list = document.getElementById("myList");
+    if(list.lastChild) {
+        list.removeChild(list.lastChild);
+    }
+});
