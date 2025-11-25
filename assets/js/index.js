@@ -713,3 +713,11 @@ document.getElementById("removeListItemBtn").addEventListener("click", function(
         list.removeChild(list.lastChild);
     }
 });
+
+// form submission
+document.getElementById("userForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    console.log(`Username: ${username}, Email: ${email}`);
+});
