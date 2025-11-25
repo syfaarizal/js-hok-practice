@@ -714,10 +714,7 @@ document.getElementById("removeListItemBtn").addEventListener("click", function(
     }
 });
 
-// form submission
-document.getElementById("userForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    console.log(`Username: ${username}, Email: ${email}`);
+// Change background color
+document.getElementById("changeBgColorBtn").addEventListener("click", function() {
+    document.body.style.backgroundColor = "lightgray";
 });
