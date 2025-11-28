@@ -718,3 +718,12 @@ document.getElementById("removeListItemBtn").addEventListener("click", function(
 document.getElementById("changeBgColorBtn").addEventListener("click", function() {
     document.body.style.backgroundColor = "lightgray";
 });
+
+// Form Handling
+document.getElementById("submitBtn").addEventListener("click", function(event) {
+    event.preventDefault();
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    console.log("Username:", username);
+    console.log("Email:", email);
+});
