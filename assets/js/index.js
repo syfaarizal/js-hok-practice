@@ -727,3 +727,15 @@ document.getElementById("submitBtn").addEventListener("click", function(event) {
     console.log("Username:", username);
     console.log("Email:", email);
 });
+
+// Challenge Form Handling
+document.getElementById("loginBtn").addEventListener("click", function(event) {
+    event.preventDefault();
+    const username = document.getElementById("usernameInput").value;
+    const password = document.getElementById("passwordInput").value;
+    if(username === "admin" && password === "password") {
+        alert("Login Berhasil!");
+    } else {
+        alert("Login Gagal!");
+    }
+});
