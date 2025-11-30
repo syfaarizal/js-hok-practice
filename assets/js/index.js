@@ -669,6 +669,20 @@ function calculateAverage(...nums) {
 }
 console.log(calculateAverage(1, 2, 3, 4, 5));
 
+// setTimeout & setInterval 
+setTimeout(() => {
+    console.log("Ini dijalankan setelah 2 detik");
+}, 2000);
+
+let count = 0;
+const intervalId = setInterval(() => {
+    console.log("Ini dijalankan setiap 1 detik");
+    count++;
+    if(count === 5) {
+        clearInterval(intervalId);
+    }
+}, 1000);
+
 // Manipulasi Element
 document.getElementById("manipulateBtn").addEventListener("click", function() {
     document.getElementById("manipulateTitle").innerHTML = "Judul telah diubah!";
@@ -739,3 +753,4 @@ document.getElementById("loginBtn").addEventListener("click", function(event) {
         alert("Login Gagal!");
     }
 });
+
