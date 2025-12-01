@@ -683,6 +683,20 @@ const intervalId = setInterval(() => {
     }
 }, 1000);
 
+// Challenge setTimeout & setInterval
+setTimeout(() => {
+    console.log("Ini dijalankan setelah 5 detik");
+}, 5000);
+
+let countNih = 0;
+const intervalIdNih = setInterval(() => {
+    console.log("Ini dijalankan setiap 1 detik");
+    countNih++;
+    if(countNih === 10) {
+        clearInterval(intervalIdNih);
+    }
+}, 1000);
+
 // Manipulasi Element
 document.getElementById("manipulateBtn").addEventListener("click", function() {
     document.getElementById("manipulateTitle").innerHTML = "Judul telah diubah!";
