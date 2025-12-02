@@ -768,3 +768,8 @@ document.getElementById("loginBtn").addEventListener("click", function(event) {
     }
 });
 
+// Reset form
+document.getElementById("resetBtn").addEventListener("click", function() {
+    document.getElementById("usernameInput").value = "";
+    document.getElementById("passwordInput").value = "";
+}); 
