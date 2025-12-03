@@ -697,6 +697,19 @@ const intervalIdNih = setInterval(() => {
     }
 }, 1000);
 
+// Promise
+const fetchData = new Promise((resolve, reject) => {
+    const success = true;
+    if(success) {
+        resolve("Data berhasil didapatkan");
+    } else {
+        reject("Data gagal didapatkan");
+    }
+});
+fetchData
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
+
 // Manipulasi Element
 document.getElementById("manipulateBtn").addEventListener("click", function() {
     document.getElementById("manipulateTitle").innerHTML = "Judul telah diubah!";
@@ -773,3 +786,5 @@ document.getElementById("resetBtn").addEventListener("click", function() {
     document.getElementById("usernameInput").value = "";
     document.getElementById("passwordInput").value = "";
 }); 
+
+// 
