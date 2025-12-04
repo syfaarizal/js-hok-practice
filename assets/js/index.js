@@ -787,4 +787,15 @@ document.getElementById("resetBtn").addEventListener("click", function() {
     document.getElementById("passwordInput").value = "";
 }); 
 
-// 
+//  Promise Challenge Level 2
+const simulateAPICall = new Promise((resolve, reject) => {
+    const success = true;
+    if(success) {
+        resolve("Data berhasil didapatkan");
+    } else {
+        reject("Data gagal didapatkan");
+    }
+});
+simulateAPICall
+    .then(result => console.log(result))
+    .catch(error => console.error(error));
