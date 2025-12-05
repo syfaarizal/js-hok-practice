@@ -799,3 +799,17 @@ const simulateAPICall = new Promise((resolve, reject) => {
 simulateAPICall
     .then(result => console.log(result))
     .catch(error => console.error(error));
+
+// Promise Challenge Level 3
+function fetchUserData() {
+    return new Promise((resolve, reject) => {
+        const success = true;
+        setTimeout(() => {
+            if(success) {
+                resolve({ name: "Syfa", age: 21, email: " "});
+            } else {
+                reject("Gagal mendapatkan data user");
+            }
+        }, 2000);
+    });
+}
