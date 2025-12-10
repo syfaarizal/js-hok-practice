@@ -813,3 +813,15 @@ function fetchUserData() {
         }, 2000);
     });
 }
+
+// async/await
+async function getUserData() {
+    try {
+        const userData = await fetchUserData();
+        console.log("User Data:", userData);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+getUserData();
